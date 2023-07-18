@@ -1,0 +1,363 @@
+/* Normalize */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    font-weight: 400;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Variables */
+
+:root{
+/* Primary */
+--Strongcyan: hsl(172, 67%, 45%);
+/* Neutral */
+--Verydarkcyan: hsl(183, 100%, 15%);
+--Darkgrayishcyan: hsl(186, 14%, 43%);
+--Grayishcyan: hsl(184, 14%, 56%);
+--Lightgrayishcyan: hsl(185, 41%, 84%);
+--Verylightgrayishcyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+}
+
+/* Styles */
+main{
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Lightgrayishcyan);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus{
+    outline: none;
+}
+
+.mainContainer{
+    width: 700px;
+    height: 50%;
+    background-color: var(--White);
+    border-radius: 15px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.inputsContainer{
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.billInputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.billInput{
+    text-align: right;
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Verydarkcyan);
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    border: none;
+    padding-right: 3%;
+    border-radius: 5px;
+}
+
+.billInput::placeholder{
+    color: var(--Darkgrayishcyan);
+}
+
+.billInput:hover{
+    outline: none;
+}
+
+.billInput:focus{
+    outline: 1px solid var(--Strongcyan);
+}
+
+label{
+    color: var(--Darkgrayishcyan);
+    font-size: 0.8rem;
+}
+
+.selectTipContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.tipselectorContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    row-gap: 10px;
+    width: 100%;
+    
+}
+.inputTipBtn{
+    width: 32%;
+    background-color: var(--Verydarkcyan);
+    border-radius: 5px;
+    border: none;
+    color: var(--White);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.inputTipBtn:hover{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Verydarkcyan);
+}
+
+.inputTipBtnCustom{
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Verydarkcyan);
+    text-align: center;
+}
+
+.inputTipBtnCustom::placeholder{
+    color: var(--Darkgrayishcyan);
+}
+
+.inputTipBtnCustom:focus{
+    outline: 1px solid var(--Strongcyan);
+}
+
+.inputTipBtnActive{
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+}
+
+.popleContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.peopleInput{
+    text-align: right;
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Verydarkcyan);
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 5%;
+    border: none;
+    padding-right: 3%;
+    border-radius: 5px;
+}
+
+.billInput::placeholder{
+    color: var(--Darkgrayishcyan);
+}
+
+.peopleInput:hover{
+    outline: none;
+}
+
+.peopleInput:focus{
+    outline: 1px solid var(--Strongcyan);
+}
+
+.peopleInputError{
+    border: 1px solid red;
+}
+
+.peopleInputError:focus{
+    outline: none
+}
+
+.peoplelabelContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.peopleError{
+    color: red;
+    visibility: hidden;
+}
+
+.peopleErrorDisplay{
+    color: red;
+    visibility: visible;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.resultsContainer{
+    width: 50%;
+    height: 100%;
+    background-color: var(--Verydarkcyan);
+    border-radius: 15px;
+    padding: 30px;
+}
+.resultsContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.resultCont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+}
+.resultsDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.tipAmount{
+    font-size: 0.75rem;
+    color: var(--White);
+}
+.tipPerson{
+    font-size: 0.7rem;
+    color: var(--Lightgrayishcyan);
+}
+.totalResult{
+    color: var(--Strongcyan);
+    font-size: 2rem;
+}
+.resetBtn{
+    width: 100%;
+    color: var(--Verydarkcyan);
+    background-color: var(--Strongcyan);
+    border: none;
+    padding: auto;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.resetBtn:hover{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Verydarkcyan);
+}
+
+.resetBtn:disabled{
+    width: 100%;
+    color: var(--Verydarkcyan);
+    background-color: var(--Strongcyan);
+    filter: opacity(20%);
+    border: none;
+    padding: auto;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 750px) {
+
+    main{
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+}
+
+    .logoContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+
+    .mainContainer{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 0px
+    }
+
+    .resultsContainer{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .inputsContainer{
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .inputTipBtn{
+        width: 45%;
+    }
+
+    .selectTipContainer{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .tipselectorContainer{
+        justify-content: center;
+    }
+
+    input{
+        height: 35px;
+    }
+
+    .resetBtn{
+        margin-top: 30px;
+    }
+
+    .resultsContainer{
+        justify-content: space-between;
+    }
+}
