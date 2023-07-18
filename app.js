@@ -77,15 +77,20 @@ peopleInput.addEventListener("input", ()=>{
 })
 
 resetBtn.addEventListener("click", ()=>{
-    resetBtn.disabled = true
-    totalAmount.innerText = "$" + (0).toFixed(2)
-    totalPerson.innerText = "$" + (0).toFixed(2)
+    resetBtn.disabled = true;
+    totalAmount.innerText = "$" + (0).toFixed(2);
+    totalPerson.innerText = "$" + (0).toFixed(2);
+    billInputValue.innerText = 0;
     resetValues()
-
+    billInput.value = "";
+    peopleInput.value = "";
 })
 
 const resetValues = () =>{
     billInputValue = 0;
     peopleInputValue = 1;
     inputTipBtnValue = 0;
+    inputTipBtn.forEach((btn) => {
+        btn.classList.remove("inputTipBtnActive");
+    });
 }
