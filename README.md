@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/juanmderosa/tip-calculator-app)
-- Live Site URL: [Add live site URL here](https://juanmderosa.github.io/tip-calculator-app)
+- Solution URL: [GitHub](https://github.com/juanmderosa/tip-calculator-app)
+- Live Site URL: [GitHub Pages](https://juanmderosa.github.io/tip-calculator-app)
 
 ### Built with
 
