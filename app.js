@@ -83,7 +83,7 @@ resetBtn.addEventListener("click", ()=>{
     billInputValue.innerText = 0;
     resetValues()
     billInput.value = "";
-    peopleInput.value = "";
+    peopleInput.value = 1;
 })
 
 const resetValues = () =>{
